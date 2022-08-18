@@ -1,0 +1,103 @@
+#MainText {
+    color: #9a9a50;
+    font-size: 66pt;
+    text-align: center;
+}
+
+#texttt {
+    width: 600px;
+    height: 80px;
+    position: absolute;
+    bottom: 90px;
+    left: 37%;
+}
+
+#ClassDesc {
+    color: #9a9a50;
+    font-size: 17pt;
+}
+
+#Warrior {
+    transition: 0.2s;
+    width: 300px;
+    height: 450px;
+    border-radius: 12px;
+    background-color: #5f1616;
+    position: absolute;
+    left: 100px;
+    top: 300px;
+    box-shadow: 8px 8px 12px 4px black;
+}
+
+#Hunter {
+    transition: 0.2s;
+    width: 300px;
+    height: 450px;
+    border-radius: 12px;
+    background-color: #1f4419;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    top: 300px;
+    box-shadow: 8px 8px 12px 4px black;
+}
+
+#Mage {
+    transition: 0.2s;
+    width: 300px;
+    height: 450px;
+    border-radius: 12px;
+    background-color: #151671;
+    position: absolute;
+    right: 100px;
+    top: 300px;
+    box-shadow: 8px 8px 12px 4px black;
+}
+
+#WarriorIMG {
+    margin: auto;
+    background-image: url("../Images/warrior.png");
+    width: 200px;
+    height: 300px;
+    vertical-align: middle;
+    margin-top: 50px;
+}
+
+#HunterIMG {
+    margin: auto;
+    background-image: url("../Images/hunter.png");
+    width: 200px;
+    height: 300px;
+    vertical-align: middle;
+    margin-top: 50px;
+}
+
+#MageIMG {
+    margin: auto;
+    background-image: url("../Images/mage.png");
+    width: 200px;
+    height: 300px;
+    vertical-align: middle;
+    margin-top: 50px;
+}
+
+#Warrior:hover {
+    background-color: #771d1d;
+    left: 110px;
+    top: 310px;
+    box-shadow: 0px 0px 0px 0px black;
+}
+
+#Hunter:hover {
+    background-color: #2b5e23;
+    margin-left: -140px;
+    top: 310px;
+    box-shadow: 0px 0px 0px 0px black;
+}
+
+#Mage:hover {
+    background-color: #1e209b;
+    right: 90px;
+    top: 310px;
+    box-shadow: 0px 0px 0px 0px black;
+}

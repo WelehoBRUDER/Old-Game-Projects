@@ -1,0 +1,811 @@
+@font-face {
+    font-family: roboto;
+    src: url(../Fonts/Roboto-Thin.ttf);
+}
+@font-face {
+    font-family: barony;
+    src: url(../Fonts/BaroneysTextured.ttf);
+}
+
+body {
+    background-color: silver;
+    font-family: roboto;
+    user-select: none;
+}
+
+
+
+#title1 {
+    font-size: 150px;
+    max-width: max-content;
+    color: red;
+    font-family: barony;
+    position: absolute;
+    width: 100%;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: block;
+}
+
+#titlebg {
+    width: 270px;
+    height: 60px;
+    background-color: brown;
+    position: absolute;
+    left: 50%;
+    margin-left: -300px;
+    top: 200px;
+}
+
+#title2 {
+    color: gold;
+    font-size: 95px;
+    text-align: center;
+    font-family: barony;
+    position: absolute;
+    top: -98px;
+}
+
+#Buttons {
+    width: 210px;
+    height: 500px;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    margin-left: -175px;
+}
+
+#Buttons button {
+    transition: 0.3s;
+    font-size: 60px;
+    margin: 20px;
+    width: 205px;
+    height: 90px;
+    font-family: roboto;
+    background-color: #855E42;
+    border-style: dotted;
+    color: white;
+    border-radius: 8px 8px 0px 0px;
+    box-shadow: inset 0 0 10px 6px #271907;
+    cursor: pointer;
+}
+
+#Buttons button:hover {
+    background-color: rgb(88, 62, 43);
+    font-size: 70px;
+}
+
+#Prog {
+    transform: scale(0);
+    width: 600px;
+    height: 800px;
+    background-color: rgb(77, 75, 75);
+    overflow: auto;
+    position: absolute;
+    top: -75%;
+    left: 50%;
+    margin-left: -300px;
+    border-radius: 8px;
+    box-shadow: 0 0 16px 12px black;
+}
+
+#Prog p {
+    font-size: 25px;
+    color: white;
+    margin-left: 20px;
+}
+
+#Prog button {
+    transition: 0.2s;
+    color: #5d0b0b !important;
+    background-color: rgb(31, 30, 30);
+    cursor: pointer;
+    font-size: 55px;
+    border-style: none;
+    border-radius: 12px;
+    width: 200px;
+    height: 80px;
+    box-shadow: 0 0 8px 4px #5d0b0b;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    margin-left: -100px;
+}
+
+#Prog button:hover {
+    box-shadow: 0 0 16px 8px #5d0b0b;
+    background-color: rgb(0, 0, 0);
+}
+
+#TutorialScreen {
+    transition: 0.4s;
+    width: 40%;
+    height: 75%;
+    border-radius: 12px;
+    background-color: rgb(74, 74, 87);
+    position: absolute;
+    left: 50%;
+    top: -80%;
+    margin-left: -20%;
+    z-index: 2;
+    overflow: auto;
+}
+
+/* MAIN HUB */
+
+#GeneralStatus {
+    border-style: solid;
+    background-color: #525252;
+    max-width: 300px;
+    max-height: 1000px;
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    box-shadow: 0 0 8px 4px black;
+    border-radius: 12px;
+    width: 25%;
+    height: 50%;
+}
+
+#GeneralStatus p {
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+#hp1 {
+    color:#f70022;
+}
+#arm1 {
+    color: #bbbbbb;
+}
+
+#lvl1 {
+    color: #b852ec;
+}
+
+#exp1 {
+    color: #d88621;
+}
+
+#gol1 {
+    color: #fbff00;
+}
+
+#Locations {
+    width: 155px;
+    max-height: 1215px;
+    background-color: gray;
+    border-radius: 8px;
+    position: absolute;
+    left: 370px;
+    top: 33px;
+    box-shadow: inset 0 0 10px 5px #525050;
+    overflow: auto;
+    height: 85%;  
+}
+
+#Locations button {
+    transition: 0.2s;
+    width: 125px;
+    margin: 10px;
+    background-color: rgb(63, 61, 61);
+    height: 60px;
+    border-style: none;
+    box-shadow: 0 0 8px 4px #2d2323;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#Locations button:hover {
+    background-color: rgb(37, 36, 36);
+    box-shadow: 0 0 16px 8px #271c1c;
+}
+
+#Location {
+    width: 600px;
+    height: 800px;
+    border-style: solid;
+    background-color: #525252;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    margin-left: -300px;
+    box-shadow: 0 0 8px 4px black;
+    border-radius: 12px;
+}
+
+#LocationName {
+    color:silver;
+    font-size: 50px;
+    font-family: barony;
+    position: absolute;
+    top: 15px;
+    left: 25px;
+}
+
+#divide {
+    width: 90%;
+    background-color: white;
+    height: 5px;
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    margin-left: -45%;
+}
+
+#LocationText {
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    left: 25px;
+    top: 145px;
+}
+
+#LocationActions {
+    width: 90%;
+    background-color: rgb(95, 94, 94);
+    height: 200px;
+    position: absolute;
+    top: 575px;
+    left: 50%;
+    margin-left: -45%;
+    border-radius: 24px;
+    display: block;
+}
+
+.LocationButton {
+    transition: 0.3s;
+    width: 85%;
+    height: 40px;
+    position: relative;
+    left: 50%;
+    top: 10px;
+    margin-top: 15px;
+    margin-left: -42.5%;
+    border-radius: 30px;
+    background-color: darkred;
+    color: gold;
+    font-size: 35px;
+    box-shadow: 0 0 8px 0px white;
+    text-shadow: 0 0 8px #d0c909;
+    cursor: pointer;
+    display: block;
+}
+
+.LocationButton:hover {
+    width: 90%;
+    margin-left: -45%;
+    background-color: rgb(102, 1, 1);
+    box-shadow: 0 0 10px 3px white;
+    text-shadow: 0 0 12px #d0c909;
+}
+
+#FindEnemies {
+    width: 300px;
+    height: 600px;
+    background-color: #440c0c;
+    border-radius: 12px;
+    border-style: solid;
+    position: absolute;
+    right: 100px;
+    top: 200px;
+    box-shadow: inset 0 0 8px 4px black;
+}
+
+.EnemShowTitle {
+    color: white;
+    font-size: 25px;
+    margin-left: 15px;
+}
+
+.EnemShow {
+    color: silver;
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+#SpellUp {
+    width: 300px;
+    height: 335px;
+    background-color: dimgrey;
+    position: absolute;
+    bottom: 50px;
+    left: 25px;
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px 5px black;
+}
+
+#SpellUp button {
+    transition: 0.2s;
+    width: 45px;
+    height: 45px;
+    background-color: rgb(68, 67, 67);
+    border-radius: 8px;
+    border-style: solid;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 0.35vw;
+    border-width: 3px;
+}
+
+#fireSkills {
+    width: 70px;
+    height: 100%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+#fireSkills button {
+    background-color: #e4781f;
+    box-shadow: 0 0 6px 3px #c73f28;
+}
+
+#fireSkills button:hover {
+    background-color: #ac5b18;
+    box-shadow: 0 0 12px 6px #c73f28;
+}
+
+#waterSkills {
+    width: 70px;
+    height: 100%;
+    position: absolute;
+    left: 75px;
+    top: 10px;
+}
+
+#waterSkills button {
+    background-color: #1f85e4;
+    box-shadow: 0 0 6px 3px #1a25bb;
+}
+
+#waterSkills button:hover {
+    background-color: #1764ac;
+    box-shadow: 0 0 12px 6px #1a25bb;
+}
+#lightningSkills {
+    width: 70px;
+    height: 100%;
+    position: absolute;
+    left: 140px;
+    top: 10px;
+}
+
+#lightningSkills button {
+    background-color: #5a0eb1;
+    box-shadow: 0 0 6px 3px #510896;
+}
+
+#lightningSkills button:hover {
+    background-color: #440b85;
+    box-shadow: 0 0 12px 6px #510896;
+}
+
+#windSkills {
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    left: 205px;
+    top: 10px;
+}
+
+#windSkills button {
+    background-color: #a1c0bd;
+    box-shadow: 0 0 6px 3px #b4b3b3;
+}
+
+#windSkills button:hover {
+    background-color: #718a87;
+    box-shadow: 0 0 12px 6px #b4b3b3;
+}
+
+.Bought {
+    border-color: gold;
+}
+
+#PlayerINV {
+    transition: 0.5s;
+    background-color: #525050;
+    max-width: 500px;
+    max-height: 900px;
+    width: 35%;
+    height: 80%;
+    position: absolute;
+    right: 15px;
+    top: 100px;
+    border-style: solid;
+    border-radius: 14px;
+    box-shadow: 0 0 10px 7px black;
+}
+
+#INV {
+    background-color: #333232;
+    width: 75%;
+    height: 55%;
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    margin-left: -37.5%;
+    overflow-y: auto;
+}
+
+#invText {
+    color: silver;
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    top: -7%;
+    margin-left: -90px;
+}
+
+#EQUIP {
+    background-color: #333232;
+    width: 75%;
+    height: 25%;
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    margin-left: -37.5%;
+    overflow-y: auto;
+}
+
+#equipText {
+    color: silver;
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    margin-left: -100px;
+}
+
+#INV p, #EQUIP p, #StoreTable p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#INV p {
+    font-size: 35px;
+}
+
+#INV p:hover {
+    background-color: #414040;
+    width: 100%;
+}
+
+#EQUIP p {
+    font-size: 35px;
+}
+
+#EQUIP p:hover {
+    background-color: #414040;
+    width: 100%;
+}
+
+#StoreTable p {
+    font-size: 35px;
+}
+
+#StoreTable p:hover {
+    background-color: #414040;
+    width: 100%;
+}
+
+.PoorClass {
+    color: #bcfe43
+}
+
+.AverageClass {
+    color: #27fe98
+}
+
+.GoodClass {
+    color: #26ceff;
+}
+
+.ExcellentClass {
+    color: #9673ff;
+}
+
+.MasterworkClass {
+    color: #fc75ff;
+    text-shadow: 0 0 8px #ca56cc;
+}
+
+.LegendaryClass {
+    color: #df9d0d;
+    text-shadow: 0 0 8px #c95a10;
+}
+
+
+
+
+#InvOpen {
+    transition: 0.2s;
+    width: 200px;
+    height: 45px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(80, 79, 79);
+    border-style: solid;
+    border-radius: 12px;
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    box-shadow: inset 0 0 10px 5px rgb(59, 59, 59);
+    transform: translateX(-50%) scale(1);
+    cursor: pointer;
+}
+
+#InvOpen:hover {
+    background-color: rgb(51, 51, 51);
+    box-shadow: inset 0 0 15px 10px rgb(31, 30, 30);
+    transform: translateX(-50%) scale(1.1);
+}
+
+
+#StoreINV {
+    transition: 0.5s;
+    background-color: #525050;
+    max-width: 1300px;
+    max-height: 900px;
+    width: 85%;
+    height: 85%;
+    position: absolute;
+    left: 15px;
+    top: 100px;
+    border-style: solid;
+    border-radius: 14px;
+    box-shadow: 0 0 10px 7px black;
+}
+
+#storeText {
+    font-family: barony;
+    color: gold;
+    font-size: 100px;
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#StoreTable {
+    background-color: #333232;
+    width: 85%;
+    height: 80%;
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    top: 105px;
+    margin-left: -42.5%;
+    overflow-y: auto;
+}
+
+.HideObject {
+    transform: scale(0);
+}
+
+#cancel {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(143, 5, 5);
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 50px;
+    text-align: center;
+    color: rgb(92, 2, 2);
+    font-size: 36px;
+    box-shadow: inset 0 0 5px 1px black;
+}
+
+.Cost {
+    color: gold;
+    text-shadow: 0 0 8px #d0c909;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    position: absolute;
+    right: 15px;
+}
+
+#StatInfo {
+    transition: 0.1s;
+    background-color: rgb(32, 32, 32);
+    width: max-content;
+    height: max-content;
+    padding-right: 15px;
+    position: absolute;
+    border-radius: 12px;
+    box-shadow: 0 0 12px 6px #1f1e1e;
+    user-select: none;
+    pointer-events: none;
+}
+
+#StatInfo * {
+    user-select: none;
+    pointer-events: none;
+}
+
+#StatInfo p {
+    margin-left: 15px;
+    font-size: 12px;
+    color: silver;
+    font-weight: 1000;
+}
+
+.dura {
+    color: rgb(139, 136, 136);
+}
+
+.fire {
+    color: orange;
+}
+
+.water {
+    color: rgb(28, 117, 146);
+}
+
+.lightning {
+    color: rgb(98, 0, 255);
+}
+
+.wind {
+    color: rgb(191, 226, 235);
+}
+
+/* GUILD SCREEN STYLES */
+
+#GuildScreen {
+    transition: 0.5s;
+    background-color: #525050;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-style: solid;
+    box-sizing: border-box;
+    border-radius: 14px;
+    box-shadow: 0 0 10px 7px black;
+}
+
+#GuildText {
+    font-family: barony;
+    color: gold;
+    font-size: 100px;
+    position: absolute;
+    top: -40px;
+    left: 150px;
+    text-decoration: underline;
+    text-shadow: 0 0 12px black;
+}
+
+
+#GuildText2 {
+    font-family: barony;
+    color: gold;
+    font-size: 100px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: underline;
+    text-shadow: 0 0 12px black;
+}
+
+#GuildText3 {
+    font-family: barony;
+    color: gold;
+    font-size: 100px;
+    position: absolute;
+    top: -40px;
+    right: 150px;
+    text-decoration: underline;
+    text-shadow: 0 0 12px black;
+}
+
+#GuildQuests {
+    background-color: #333232;
+    width: 550px;
+    height: 70%;
+    border-radius: 8px;
+    position: absolute;
+    left: 110px;
+    top: 170px;
+    overflow-y: auto;
+    border-style: solid;
+    box-shadow: 0 0 10px 7px rgb(31, 30, 30);
+    font-size: 26px;
+    font-weight: 1000;
+}
+
+#CompletedQuests {
+    background-color: #333232;
+    width: 450px;
+    height: 70%;
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    top: 170px;
+    margin-left: -225px;
+    overflow-y: auto;
+    border-style: solid;
+    box-shadow: 0 0 10px 7px rgb(31, 30, 30);
+    font-size: 26px;
+    font-weight: 1000;
+}
+
+#CurrentQuests {
+    background-color: #333232;
+    width: 420px;
+    height: 70%;
+    border-radius: 8px;
+    position: absolute;
+    right: 110px;
+    top: 170px;
+    overflow-y: auto;
+    border-style: solid;
+    box-shadow: 0 0 10px 7px rgb(31, 30, 30);
+    font-size: 26px;
+    font-weight: 1000;
+}
+
+#GuildQuests p:hover {
+    background-color: #414040;
+    width: 100%;
+    margin-left: 0px;
+}
+
+#CompletedQuests p:hover {
+    background-color: #414040;
+    width: 100%;
+    margin-left: 0px;
+}
+
+#CurrentQuests p:hover {
+    background-color: #414040;
+    width: 100%;
+    margin-left: 0px;
+}
+
+/* Guild Tiers */
+
+.F {
+    color: rgb(10, 230, 10);
+}
+
+.E {
+    color: rgb(3, 114, 3);
+}
+
+.D {
+    color: rgb(0, 115, 182);
+}
+
+.C {
+    color: rgb(243, 239, 1);
+}
+
+.B {
+    color: rgb(179, 108, 2);
+}
+
+.A {
+    color: rgb(153, 6, 6);
+}
+
+.S {
+    color: rgb(61, 0, 0);
+    text-shadow: 0 0 12px #f70022;
+}
+
+.F, .E, .D, .C, .B, .A, .S {
+    margin-left: 15px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}

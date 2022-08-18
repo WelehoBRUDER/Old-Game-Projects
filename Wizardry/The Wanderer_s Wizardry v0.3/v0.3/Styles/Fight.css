@@ -1,0 +1,333 @@
+#PlayerStatus {
+    font-size: 25px;
+    width: 300px;
+    height: 200px;
+    border-radius: 12px;
+    background-color: silver;
+    border-style: solid;
+    border-width: 5px;
+    position: absolute;
+    left: 350px;
+    top: 50px;
+}
+
+#ActionStatus {
+    width: 300px;
+    height: 375px;
+    border-radius: 12px;
+    background-color: #444343;
+    border-style: solid;
+    border-width: 5px;
+    position: absolute;
+    left: 30px;
+    top: 50px;
+    overflow: auto;
+}
+
+#EnemyAction {
+    width: 300px;
+    height: 375px;
+    border-radius: 12px;
+    background-color: #444343;
+    border-style: solid;
+    border-width: 5px;
+    position: absolute;
+    right: 30px;
+    top: 50px;
+}
+
+#PlayerStatus p {
+    margin-left: 15px;
+    font-weight: 1000;
+}
+
+#Health {
+    color: crimson;
+}
+
+#Armor {
+    color: gray;
+}
+
+#EnemyStatus {
+    width: 310px;
+    height: 420px;
+    position: absolute;
+    right: 30px;
+    top: 450px;
+}
+
+.Status {
+    font-size: 26px;
+    width: 300px;
+    height: 200px;
+    border-radius: 12px;
+    background-color: silver;
+    border-style: solid;
+    border-width: 5px;
+    position: relative;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.Status p {
+    margin-left: 15px;
+    font-weight: 1000;
+    user-select: none;
+    pointer-events: none;
+}
+
+.ActionText {
+    color: rgb(255, 208, 0);
+    font-weight: 1100;
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+#PlayerActions {
+    font-weight: 1000;
+    font-size: 28px;
+    color: rgb(92, 8, 8);
+    position: absolute;
+    left: 100px;
+    top: 420px;
+}
+
+.select {
+    border-color: gold;
+}
+
+
+  button[tool-tip] {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  button[tool-tip]::after {
+    content: attr(tool-tip);
+    display: block;
+    background-color: rgb(44, 44, 44);
+    position: absolute;
+    left: -90px;
+    bottom: 0%;
+    max-width: 300px;
+    padding: 0.5em 0.5em;
+    color: white;
+    border-radius: 10px;
+    font-size: 1em;
+    z-index: 1;
+    width: max-content;
+    transform: translateX(-50%);
+    box-shadow: 6px 6px 0px 0px black;
+    transform: scale(0);
+    transition: 
+      transform ease-in-out 0.1s,
+      bottom ease-in-out 0.1s;
+  }
+  
+  button[tool-tip]:hover::after {
+    transition: 
+    transform ease-in-out 0.05s 0.5s,
+    bottom ease-in-out 0.05s 0.5s;
+    transform: scale(1);
+    bottom: 180%;
+  }
+
+  #Spells {
+      position: absolute;
+      left: 400px;
+      top: 600px;
+  }
+
+#CombatLog {
+    width: 400px;
+    height: 35%;
+    border-radius: 12px;
+    background-color: rgb(34, 33, 33);
+    border-style: solid;
+    border-width: 4px;
+    border-color: peru;
+    position: absolute;
+    left: 30px;
+    bottom: 50px;
+    overflow: auto;
+}
+
+.player {
+    color: green;
+    font-size: 24px;
+    margin-left: 15px;
+}
+
+.enemy {
+    color: red;
+    font-size: 24px;
+    margin-left: 15px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #474747;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(49, 49, 49);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(19, 19, 19);
+  }
+
+#cbuttons {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    left: 37px;
+    top: 480px;
+}
+
+#cbuttons button {
+    transition: 0.2s;
+    font-size: 30px;
+    color: white;
+    background-color: rgb(34, 33, 33);
+    margin: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 4px 3px black;
+}
+
+#cbuttons button:hover {
+    background-color: rgb(17, 16, 16);
+    box-shadow: 0 0 8px 6px black;
+}
+
+#Spells {
+    width: 50%;
+    height: 40%;
+    background-color: rgb(49, 49, 49);
+    position: absolute;
+    left: 490px;
+    top: 280px;
+    border-radius: 18px;
+    border-style: solid;
+    border-color: lightskyblue;
+}
+
+#Spells button {
+    transition: 0.2s;
+    display: inline-block;
+    height: 50px;
+    background-color: rgb(124, 122, 122);
+    border-radius: 8px;
+    margin: 25px;
+    font-family: roboto;
+    font-weight: 1000;
+    font-size: 30px;
+    border-style: none;
+    box-shadow: inset 0 0 6px 4px #424040;
+}
+
+#Spells button:hover {
+    font-size: 31px;
+    background-color: rgb(70, 68, 68);
+    box-shadow: inset 0 0 12px 8px #272626;
+}
+
+#spell0 {
+    color: orange ;
+}
+
+#spell1 {
+    color: blue;
+}
+
+#spell2 {
+    color: purple;
+}
+
+#spell3 {
+    color: white;
+}
+  
+#BattleEnd {
+    transition: 0.4s;
+    width: 40%;
+    height: 60%;
+    border-radius: 12px;
+    background-color: rgb(74, 74, 87);
+    position: fixed;
+    left: 50%;
+    top: -10%;
+    margin-left: -20%;
+}
+
+.BattleTitle {
+    font-size: 100px;
+    font-family: barony;
+    color: yellow;
+    text-align: center;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    margin-left: -100px;
+}
+
+.line00 {
+    background-color: rgb(36, 36, 36);
+    width: 90%;
+    height: 1%;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    margin-left: -45%;
+}
+
+.BattleText {
+    font-size: 2.5vh;
+    color: white;
+    position: relative;
+    left: 0%;
+    top: 30%;
+    margin-left: 60px;
+}
+
+.BattleEndButton {
+    transition: 0.3s;
+    font-size: 32px;
+    color: rgb(17, 9, 9);
+    background-color: silver;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -50px;
+    border-radius: 8px;
+    border-style: solid;
+    cursor: pointer;
+    box-shadow: inset 0 0 8px 4px #a2a0a0;
+}
+
+.BattleEndButton:hover {
+    box-shadow: inset 0 0 16px 8px #6b6a6a;
+    background-color: rgb(161, 161, 161);
+}
+
+.animgone {
+    top: 100%;
+}
+
+.statusEffect {
+    color: rgb(126, 6, 6);
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}

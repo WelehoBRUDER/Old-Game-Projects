@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Advanced RPG Test v1.3</title>
+    <link rel="stylesheet" type="text/css" href="Styles/Combat.css">
+    <link rel="stylesheet" type="text/css" href="Styles/UpgradeScreen.css">
+    <link rel="stylesheet" type="text/css" href="Styles/LevelUp.css">
+    <link rel="stylesheet" type="text/css" href="Styles/Explore.css">
+</head>
+
+<body>
+    <div id="MainCombat">
+        <div id="StatusScreen">
+            <div id="CharPor">
+                <p id="charname">Hero</p>
+            </div>
+            <div id="actionBar">
+                <div id="actionFill"></div>
+            </div>
+            <div id="CharBars">
+                <div id="healthBar">
+                    <div id="healthFill"></div>
+                </div>
+                <div id="manaBar">
+                    <div id="manaFill"></div>
+                </div>
+            </div>
+        </div>
+        <div id="BasicAttack">
+            <div id="AttackBox" onclick="bang()">
+                <p id="attackk">ATK</p>
+            </div>
+        </div>
+        <div id="Skills">
+            <div id="SkillBox" onclick="SkillMenu()">
+                <p>SKI</p>
+            </div>
+        </div>
+        <div id="Specials">
+            <div id="SpecialBox" onclick="SpecialMenu()">
+                <p>SPE</p>
+            </div>
+        </div>
+        <div id="Magic">
+            <div id="MagicBox" onclick="MagicMenu()">
+                <p>MAG</p>
+            </div>
+        </div>
+        <div id="SkillScreen">
+            <div id="SkillScreenBox" hidden>
+                <button id="Skill1" onclick="UseSkill(1)" onmouseover="ShowSkill(1)" onmouseout="ShowSkill(0)"></button>
+                <button id="Skill2" onclick="UseSkill(2)" onmouseover="ShowSkill(2)" onmouseout="ShowSkill(0)"></button>
+                <button id="Skill3" onclick="UseSkill(3)" onmouseover="ShowSkill(3)" onmouseout="ShowSkill(0)"></button>
+                <button id="Skill4" onclick="UseSkill(4)" onmouseover="ShowSkill(5)" onmouseout="ShowSkill(0)"></button>
+            </div>
+            <div id="SpecialScreenBox" hidden>
+
+            </div>
+            <div id="MagicScreenBox" hidden>
+                <button id="Spell1" onclick="CastMagic(1)" onmouseover="ShowSkill(4)" onmouseout="ShowSkill(0)"></button>
+                <button id="Spell2" onclick="CastMagic(2)" onmouseover="ShowSkill(6)" onmouseout="ShowSkill(0)"></button>
+            </div>
+        </div>
+        <div id = "AbiDesc" >
+            <p id = "AbiDescText"></p>
+        </div>
+        <div id="StatusEffects">
+            <div id="EnemyStatuses">
+                <p id="stat1"></p>
+                <p id="stat2"></p>
+                <p id="stat3"></p>
+            </div>
+            <div id="PlayerStatuses">
+                <p id="pstat1"></p>
+            </div>
+        </div>
+        <div id="EnemyScreen">
+            <div id="actionBarEn">
+                <div id="actionFillen"></div>
+            </div>
+            <div id="EnemyPor">
+                <p id="enemyname">Skeleton</p>
+            </div>
+            <div id="healthBarEn">
+                <div id="healthFillen"></div>
+            </div>
+        </div>
+        <div id="Anims">
+            <div id="hero">
+                <img src="Images/sexyHero.png">
+            </div>
+            <div id="enem">
+                <img src="Images/skellington.png" id="skelA">
+                <img src="Images/skellingtonD.png" id="skelD" hidden>
+                <img src="Images/Goblin.png" id="en1" hidden>
+                <img src="Images/Orc.png" id="en2" hidden>
+                <img src="Images/Demon.png" id="en3" hidden>
+                <img src="Images/Giant.png" id="en4" hidden>
+                <img src="Images/UndeadKnight.png" id="en5" hidden>
+                <img src="Images/CursedOrc.png" id="en6" hidden>
+                <img src="Images/Spririt.png" id="en7" hidden>
+                <img src="Images/GiantChief.png" id="en8" hidden>
+                <img src="Images/FallenKnight.png" id="bos1" hidden>
+                <img src="Images/FallenKnightDead.png" id="bos1D" hidden>
+                <img src="Images/GuardianKnight.png" id="en9" hidden>
+                <img src="Images/GuardianKnightD.png" id="en9D" hidden>
+                <img src="Images/Bash.png" id="en10" hidden>
+                <img src="Images/Rowd.png" id="en11" hidden>
+                <img src="Images/Demon2.png" id="en12" hidden>
+                <img src="Images/LesVamp.png" id="en13" hidden>
+                <img src="Images/GreatGiant.png" id="en14" hidden>
+                <img src="Images/Titan.png" id="en15" hidden>
+                <img src="Images/DeathKnight.png" id="en16" hidden>
+                <img src="Images/Bigfoot.png" id="en17" hidden>
+                <img src="Images/AsmondFake.png" id="en18" hidden>
+                <img src="Images/Asmond.png" id="bos2" hidden>
+            </div>
+        </div>
+        <div id="DamageIndicators">
+            <div id="DamagePlayer">
+                <p id="d1"></p>
+            </div>
+            <div id="DamageEnemy">
+                <p id="d2"></p>
+            </div>
+        </div>
+        <div id="dodged">
+            <p id="pdod"></p>
+            <p id="edod"></p>
+        </div>
+        <div id="crit">
+            <p id="pcrit"></p>
+            <p id="ecrit"></p>
+        </div>
+        <div id="statusNums">
+            <div id="pstatus">
+                <p id="pmana"></p>
+                <p id="phealth"></p>
+            </div>
+            <div id="estatus">
+                <div id="ehealth"></div>
+            </div>
+        </div>
+        <div id="CombatEvents">
+            <div id="DragMove"></div>
+            <div id="CombatEventTexts">
+
+            </div>
+        </div>
+        <div id = "cooldowns">
+            <div id = "Skill1CD" hidden>
+                <p id = "Skill1CDT"></p>
+            </div>
+            <div id = "Skill2CD" hidden>
+                <p id = "Skill2CDT"></p>
+            </div>
+            <div id = "Skill3CD" hidden>
+                <p id = "Skill3CDT"></p>
+            </div>
+            <div id = "Skill4CD" hidden>
+                <p id = "Skill4CDT"></p>
+            </div>
+        </div>
+        <div id="Victory">
+            <div id="VictoryTextBox" hidden>
+                <button id="NextButton" onclick="PerkScreen()">Continue</button>
+                <button id="NextButton2" onclick="CalcWins(), Return()">Continue</button>
+                <button id="NextButton3" onclick="CalcLosses(), Return()">Continue</button>
+                <button id="AgainButton" onclick="CalcWins(), CheckEnem()">Again</button>
+                <p id="VictoryText"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="ClassSelect" hidden>
+        <div id="Classes">
+            <p id="MainText">Choose your class</p>
+            <div id="Warrior" onclick="WarriorSelect()">
+                <div id="WarriorIMG"></div>
+            </div>
+            <div id="Hunter">
+                <div id="HunterIMG"></div>
+            </div>
+            <div id="Mage">
+                <div id="MageIMG"></div>
+            </div>
+            <div id="texttt">
+                <p id="ClassDesc"></p>
+            </div>
+        </div>
+    </div>
+    <div id="LevelUpScreen" hidden>
+        <div id="Currency">
+            <p id="SFam"></p>
+            <p id="Gam"></p>
+        </div>
+        <div id="topbar">
+            <div id="Stats" onclick="Selected(1)">Stats</div>
+            <div id="SkillsMen" onclick="Selected(2)" hidden>Skills</div>
+            <div id="Perks" onclick="Selected(3)">Perks</div>
+            <div id="CharStat" onclick="Selected(4)">Character</div>
+            <div id="Merchant" onclick="Selected(5)">Store</div>
+            <div id="Locations" onclick="Selected(6)">Locations</div>
+        </div>
+        <div id="Statistics">
+            <div id="Levels">
+                <P id="level"></P>
+                <p id='nextlvl'></p>
+            </div>
+            <p id="StatDesc"></p>
+            <div id="StatButts">
+                <div id="StatTexts1">
+                    <p id="str"></p>
+                    <p id="def"></p>
+                    <p id="agi"></p>
+                    <p id="mnd"></p>
+                </div>
+                <div id="StatTexts2">
+                    <p id="wis"></p>
+                    <p id="crt"></p>
+                    <p id="vig"></p>
+                    <p id="dod"></p>
+                </div>
+                <div id="StatUp">
+                    <button onclick="ImprovChar(1)" id="s1">STR+</button>
+                    <button onclick="ImprovChar(2)" id="s2">DEF+</button>
+                    <button onclick="ImprovChar(3)" id="s3">AGI+</button>
+                    <button onclick="ImprovChar(4)" id="s4">MND+</button>
+                    <button onclick="ImprovChar(5)" id="s5">WIS+</button>
+                    <button onclick="ImprovChar(6)" id="s6">CRT+</button>
+                    <button onclick="ImprovChar(7)" id="s7">VIG+</button>
+                    <button onclick="ImprovChar(8)" id="s8">DOD+</button>
+                </div>
+            </div>
+        </div>
+        <div id="SkillPanel"></div>
+        <div id="PerkTrees">
+            <p id="PerkDesc"></p>
+            <div id="WarriorTree">
+                <div id="WPerks">
+                    <div id="decoration">
+                        <div id="dec1"></div>
+                        <div id="dec2"></div>
+                        <div id="dec3"></div>
+                        <div id="dec4"></div>
+                        <div id="dec5"></div>
+                    </div>
+                    <button id="war1" onclick="BuyPerk(1)">W1</button>
+                    <button id="war2" onclick="BuyPerk(2)">W2</button>
+                    <button id="war3" onclick="BuyPerk(3)">W3</button>
+                    <button id="war4" onclick="BuyPerk(4)">W4</button>
+                    <button id="war5" onclick="BuyPerk(5)">W5</button>
+                    <button id="war6" onclick="BuyPerk(6)">W6</button>
+                    <button id="war7" onclick="BuyPerk(7)">W7</button>
+                    <button id="war8" onclick="BuyPerk(8)">W8</button>
+                    <button id="war9" onclick="BuyPerk(9)">W9</button>
+                    <button id="war10" onclick="BuyPerk(10)">W10</button>
+                    <button id="war11" onclick="BuyPerk(11)">W11</button>
+                </div>
+            </div>
+        </div>
+        <div id="CharPanel">
+            <div id="CharTexts">
+                <p id="damg"></p>
+                <p id="trudmg"></p>
+                <p id="mhp"></p>
+                <p id="mm"></p>
+                <p id="dc"></p>
+                <p id="cc"></p>
+                <p id="def7"></p>
+                <p id="sped"></p>
+                <p id="clas">Class: Warrior</p>
+            </div>
+        </div>
+        <div id="Store">
+            <p id="StoreDesc"></p>
+            <div id="StoreButtons">
+                <div id="wep1" onclick="BuyItem(1)">
+                    <div class="weppic"></div>
+                    <div class="buymark" id="buymark1"></div>
+                </div>
+                <div id="wep2" onclick="BuyItem(2)">
+                    <div class="weppic"></div>
+                    <div class="buymark" id="buymark2"></div>
+                </div>
+                <div id="wep3" onclick="BuyItem(3)">
+                    <div class="weppic"></div>
+                    <div class="buymark" id="buymark3"></div>
+                </div>
+                <div id="wep4" onclick="BuyItem(4)">
+                    <div class="weppic"></div>
+                    <div class="buymark" id="buymark4"></div>
+                </div>
+                <div id="wep5" onclick="BuyItem(9)">
+                    <div class="weppic"></div>
+                    <div class="buymark" id="buymark5"></div>
+                </div>
+                <div id="arm1" onclick="BuyItem(5)">
+                    <div class="armpic"></div>
+                    <div class="buymark" id="buymark6"></div>
+                </div>
+                <div id="arm2" onclick="BuyItem(6)">
+                    <div class="armpic"></div>
+                    <div class="buymark" id="buymark7"></div>
+                </div>
+                <div id="arm3" onclick="BuyItem(7)">
+                    <div class="armpic"></div>
+                    <div class="buymark" id="buymark8"></div>
+                </div>
+                <div id="arm4" onclick="BuyItem(8)">
+                    <div class="armpic"></div>
+                    <div class="buymark" id="buymark9"></div>
+                </div>
+                <div id="arm5" onclick="BuyItem(10)">
+                    <div class="armpic"></div>
+                    <div class="buymark" id="buymark10"></div>
+                </div>
+            </div>
+            <div id = "GoldDump">
+                <div id = "ResBosses" onclick="BuyItem(16)">
+                    <p>Resurrect Bosses</p>
+                </div>
+            </div>
+        </div>
+        <div id="LocationsPanel">
+            <div id="LocationButtons">
+                <!-- <button id = "Forest1" onclick="Explore(0)">Forest</button> -->
+                <button id="Enemy1" onclick="Explore(1)">Level 1</button>
+                <button id="Enemy2" onclick="Explore(2)">Level 2</button>
+                <button id="Enemy3" onclick="Explore(3)">Level 3</button>
+                <button id="Enemy4" onclick="Explore(4)">Level 4</button>
+                <button id="Enemy5" onclick="Explore(5)">Level 5</button>
+                <button id="Enemy6" onclick="Explore(6)">Level 6</button>
+                <button id="Enemy7" onclick="Explore(7)">Level 7</button>
+                <button id="Enemy8" onclick="Explore(8)">Level 8</button>
+                <button id="Enemy9" onclick="Explore(9)">Level 9</button>
+                <button id="Enemy10" onclick="Explore(10)">Level 10</button>
+                <button id="Enemy11" onclick="Explore(11)">Level 11</button>
+                <button id="Enemy12" onclick="Explore(12)">Level 12</button>
+                <button id="Enemy13" onclick="Explore(13)">Level 13</button>
+                <button id="Enemy14" onclick="Explore(14)">Level 14</button>
+                <button id="Enemy15" onclick="Explore(15)">Level 15</button>
+                <button id="Enemy16" onclick="Explore(16)">Level 16</button>
+                <button id="Enemy17" onclick="Explore(17)">Level 17</button>
+                <button id="Enemy18" onclick="Explore(18)">Level 18</button>
+                <button id="Enemy19" onclick="Explore(19)">Level 19</button>
+                <button id="Enemy20" onclick="Explore(20)">Level 20</button>
+            </div>
+        </div>
+    </div>
+    <div id="Events" hidden>
+        <div id=EventButtons>
+
+        </div>
+        <div id="ForestEvents">
+            <div id="ForestEvent1">
+                <p class="EventText">
+                    While wandering around the forest you came across the corpse of a monster. Warily you rummage
+                    through it.
+                </p>
+                <p id="FRAGMENTF1"></p>
+            </div>
+            <div id="ForestEvent2">
+                <p class="EventText">
+                    You wander around the forest for a while but find nothing.
+                </p>
+            </div>
+        </div>
+        <button id="Back" onclick="Return()">Back</button>
+        <button id="Again" onclick="Explore(1)">Continue</button>
+    </div>
+</body>
+
+</html>
+<script src="Scripts/Values.js"></script>
+<script src="Scripts/Combat.js"></script>
+<script src="Scripts/NonCombat.js"></script>
+<script src="Scripts/Improve.js"></script>
+<script src="Scripts/Enemies.js"></script>

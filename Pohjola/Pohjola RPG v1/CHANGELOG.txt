@@ -1,0 +1,15 @@
+V.1.0 Changes:
+- Heal spell now heals between 10-20% of Max HP, instead of a flat 20hp.
+- MND increases maximum mana by 25 per level.
+- Added 3 new perks.
+- Added character panel in menu that shows player stats.
+- Bugfixes.
+- Player and enemy can now both dodge. Dodge is calculated like this: Random 1-100 + dodge. If result > 89 then dodge successful.
+- Crits have been added. They are calculated like dodge. Crits deal 200% dmg and ignore armor.
+- Speed works now.
+- Enemies have been rebalanced.
+- Lowered base speed slightly.
+- Added numeral indicators for HP and MP in combat.
+- Added gold that can be used to buy gear. Gold is gained from combat.
+- Added store with 4 weapons and 4 armour. Items that have been bought once can be freely equipped whenever.
+- Added Level 6. It is home to the Cursed Orc, a terrifyingly powerful being with an insatiable bloodlust.

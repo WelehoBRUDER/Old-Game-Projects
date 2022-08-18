@@ -1,0 +1,25 @@
+
+#Events {
+    font-size: 22pt;
+    color: silver;
+    text-align: center;
+}
+
+#Events button {
+    outline: none;
+    transition: 0.2s;
+    width: 120px;
+    height: 60px;
+    font-size: 20pt;
+    background-color: crimson;
+    color: white;
+    border-style: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px 1px black;
+}
+
+#Events button:hover {
+    font-size: 18pt;
+    box-shadow: inset 0 0 10px 6px black;
+    border-style: solid;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RPG</title>
+
+    <link rel="stylesheet" type="text/css" href="Styling.css">
+</head>
+
+<body>
+    <div id="game">
+    <!--Images-->
+    <img src="images/Player/PC.png" id="portrait">
+    <img src="images/Enemies/goblin.png" id="portrait2">
+    <!--Stats and stuff-->
+    <p id="HP"></p>
+    <p id="STA"></p>
+    <p id="MP"></p>
+    <p id="VIT"></p>
+    <p id="STR"></p>
+    <p id="AGI"></p>
+    <p id="INT"></p>
+    <p id="DMG"></p>
+    <p id="EVA"></p>
+    <p id="DEX"></p>
+    <p id="DEF"></p>
+    <!--Enemy stats-->
+    <p id="eHP"></p>
+    <p id="eSTA"></p>
+    <p id="eMP"></p>
+    <p id="eDMG"></p>
+    <p id="eEVA"></p>
+    <p id="eDEX"></p>
+    <p id="eDEF"></p>
+    <!--Buttons-->
+    <button class="recht" onclick="Upgrade(1)">VIT+</button>
+    <button class="recht" onclick="Upgrade(2)">STR+</button>
+    <button class="recht" onclick="Upgrade(3)">AGI+</button>
+    <button class="recht" onclick="Upgrade(4)">INT+</button>
+    <button id="combat1" onclick="Attack(1)">Attack</button>
+    <button id="combat2" onclick="Powers()">Powers</button>
+    <button id="combat3" onclick="Spells()">Spells</button>
+    <button id="combat4" onclick="rest()">Rest</button>
+    <button id="again" onclick="again()"></button>
+    <button id="next" onclick="continueE()"></button>
+    <button id="combatP1" onclick="Attack(2)">Break</button>
+    <button id="combatP2" onclick="Attack(3)">Crushing Blow</button>
+    <button id="combatS1" onclick="Attack(7)">Fireball</button>
+    <button id="combatS2" onclick="Heal(1)">Heal</button>
+    <!--Remaining Stat Points-->
+    <p id="STP"></p>
+    <!--UI & Stuff-->
+    <p id="enemy"></p>
+    <p id="alert"></p>
+    <p id="stun"></p>
+    <!--Levels-->
+    <p id="level"></p>'
+    <p id="xp"></p>
+    <!--Dialogue and such-->
+    <p id="condition"></p>
+    <p id="p1"></p>
+    <p id="e1"></p>
+    </div>
+    <h1 id="OOOOOOOOF">GAME OVER</h1>
+    <p id="whydead"></p>
+    <script src="Enemies.js"></script>
+    <script src="Texts.js"></script>
+    <script src="Special.js"></script>
+    <script src="CoreGame.js"></script>
+</body>
+
+</html>

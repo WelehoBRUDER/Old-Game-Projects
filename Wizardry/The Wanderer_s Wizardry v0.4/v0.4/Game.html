@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Wanderer's Wizardry v0.4</title>
+    <link rel="stylesheet" type="text/css" href="Styles/Main.css">
+    <link rel="stylesheet" type="text/css" href="Styles/Fight.css">
+</head>
+<body>
+    <div id = "mainmenu" >
+        <div id = "Title">
+            <p id = "title1">The Wanderer's</p>
+            <div id = "titlebg">
+                <p id = "title2">Wizardry</p>
+            </div>
+        </div>
+        <div id = "Buttons">
+            <button onclick="TutorialStart()">Start</button>
+            <button>Load</button>
+        </div>
+    </div>
+    <div id = "Prog" >
+        <p>You are a magician on a journey to become the world's greatest. You're fully ready for anything, you've got your diploma from the Wizard's University after all!<br>
+            Though graduating with top grades isn't the same as being a capable wizard. You'll still need some real world experience if you are ever to seriosly accomplish
+            your goal.<br> And so you registered in the Adventurer's Guild and took on your first quest! You are to slay 3 rats within the outskirts of town.<br> Rats will harass
+            livestock and poison food if left unchecked - a real nuisance to life!<br> It is now up to you to free the farmers of these pests. It doesn't take long until you 
+            come across exactly what you're looking for.<br> Three rats are planning their next offensive, but unfortunately for them, you've got different ideas!
+        </p>
+        <button onclick="TutorialStart2()">Fight!</button>
+    </div>
+    <div id = "CombatScreen" hidden>
+        <div id = "TutorialScreen"></div>
+        <div id = "PlayerStatus">
+            <p id = "Name">Wanderer</p>
+            <p id = "Health">HP : 75/75</p>
+            <p id = "Armor">ARM : 8/8</p>
+        </div>
+        <div id = "ActionStatus"></div>
+        <p id = "PlayerActions"></p>
+        <div id = "Spells">
+            <button id="spell0" tool-tip="Cast a simple fire spell that deals 15 damage.">Burn</button>
+            <button id="spell1" tool-tip="Cast a simple water spell that deals 10 damage.">Splash</button>
+            <button id="spell2" tool-tip="Cast a simple lightning spell that deals 18 damage.">Shock</button>
+            <button id="spell3" tool-tip="Cast a simple wind spell that deals 8 damage.">Breeze</button>
+            <button id="spell4" tool-tip="Cast a more advanced wind spell." class="HideObject">Poison Wind</button>
+        </div>
+        <div id = "cbuttons">
+            <button onclick="Clear()">Clear</button>
+            <button onclick="endTurn()">End Turn</button>
+        </div>
+        <div id = "EnemyAction"></div>
+        <div id = "EnemyStatus"></div>
+        <div id = "CombatLog"></div>
+        <div id = BattleEnd hidden>
+        </div>
+    </div>
+    <div id = "MainHub" hidden>
+        <div id = "GeneralStatus">
+            <p id = "hp1">hp</p>
+            <p id = "arm1">armour</p>
+            <p id = "lvl1">level</p>
+            <p id = "exp1">exp</p>
+            <p id = "gol1">gold</p>
+            <p id = "skl1">skil</p>
+        </div>
+        <div id = "PerkButton" onclick="OpenPerkTree()">Perk Tree</div>
+        <div id = "PerkTree" class="HideObject">
+            <div id="cancel" onclick="OpenPerkTree()">X</div>
+            <div id = "CharacterSheet"></div>
+            <div id = "AllPerks"></div>
+            <p id = "PerkInfoText"></p>
+        </div>
+        <div id = "Locations">
+            <button id="loc0">Guild</button>
+            <button id="loc1">Smith</button>
+            <button id="loc2">Inn</button>
+            <button id="loc3">Enhancer</button>
+            <button id="loc4">Sewers</button>
+            <button id="loc5">Slums</button>
+            <button id="loc6">Woods</button>
+            <button id="loc7">Lake</button>
+            <button id="loc8">Cavern</button>
+            <button id="loc9">Grove</button>
+            <button id="loc10">Temple</button>
+        </div>
+        <div id = "Location">
+            <p id = "LocationName"></p>
+            <div id = "divide"></div>
+            <p id = "LocationText"></p>
+            <div id = "LocationActions"></div>
+        </div>
+        <div id = "FindEnemies" hidden></div>
+        <div id = "SpellUp" hidden>
+            <div id = "fireSkills">
+                <button id = "perk0" tool-tip="Fire Damage +5, Cost: 1 SP">Fire I</button>
+                <button id = "perk1" tool-tip="Fire Damage +7, Cost: 2 SP">Fire II</button>
+                <button id = "perk2" tool-tip="Fire Damage +9, Cost: 3 SP">Fire III</button>
+            </div>
+            <div id = "waterSkills">
+                <button id = "perk3" tool-tip="Water Damage +7, Cost: 1 SP">Water I</button>
+                <button id = "perk4" tool-tip="Water Damage +9, Cost: 2 SP">Water II</button>
+                <button id = "perk5"tool-tip="Water Damage +11, Cost: 3 SP">Water III</button>
+            </div>
+            <div id = "lightningSkills">
+                <button id = "perk6" tool-tip="Lightning Damage +5, Cost: 1 SP">Lightning I</button>
+                <button id = "perk7" tool-tip="Lightning Damage +7, Cost: 2 SP">Lightning II</button>
+                <button id = "perk8" tool-tip="Lightning Damage +9, Cost: 3 SP">Lightning III</button>
+            </div>
+            <div id = "windSkills">
+                <button id = "perk9" tool-tip="Wind Damage +10, Cost: 1 SP">Wind I</button>
+                <button id = "perk10" tool-tip="Wind Damage +7, Cost: 2 SP">Wind II</button>
+                <button id = "perk11" tool-tip="Wind Damage +12, Cost: 3 SP">Wind III</button>
+            </div>
+        </div>
+        <button id = "InvOpen" onclick="OPENINV()">Inventory</button>
+        <div id = "PlayerINV" class="HideObject">
+            <p id = "invText">Inventory</p>
+            <div id = "INV"></div>
+            <p id = "equipText">Equipment</p>
+            <div id = "EQUIP"></div>
+        </div>
+        <div id = "StoreINV" class="HideObject">
+            <div id="cancel" onclick="OpenShop()">X</div>
+            <p id = "storeText">For sale</p>
+            <div id="StoreTable"></div>
+        </div>
+        <div id = "GuildScreen" class="HideObject">
+            <div id="cancel" onclick="OpenGuild()">X</div>
+            <p id = "GuildText">Quests available</p>
+            <div id = "GuildQuests"></div>
+            <p id = "GuildText2">Completed Quests</p>
+            <div id = "CompletedQuests"></div>
+            <p id = "GuildText3">Your quests</p>
+            <div id = "CurrentQuests"></div>
+            <button id = "ResetGuild" onclick="NewQuests()" tool-tip="Refresh available quests. Cost: 100 Coins.">Ask for new tasks</button>
+        </div>
+        <div id = "StatInfo" class = "HideObject"></div>
+        <div id="QuestPop" class="HideObject">
+            <p id="PopQuest">Completed Quest(s)!</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="Scripts/Moves.js"></script>
+<script src="Scripts/Enemies.js"></script>
+<script src="Scripts/Values.js"></script>
+<script src="Scripts/Hub.js"></script>
+<script src="Scripts/Tutorial.js"></script>
+<script src="Scripts/GenerateBattle.js"></script>
+<script src="Scripts/DeepCopy.js"></script>
+<script src="Scripts/Quests.js"></script>
+<script src="Scripts/Locations.js"></script>
+<script src="Scripts/PlaceHolder.js"></script>
+<script src="Scripts/Inventory.js"></script>
+<script src="Scripts/Store.js"></script>
+<script src="Scripts/AdventurerGuild.js"></script>
+<script src="Scripts/PerkTree.js"></script>
+<script src="Scripts/Combat.js"></script>

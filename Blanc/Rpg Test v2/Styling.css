@@ -1,0 +1,395 @@
+@font-face {
+    src: url(fonts/Enchanted\ Land.otf);
+    font-family: Enchant;
+}
+
+@font-face {
+    src: url(fonts/MagicSchoolOne.ttf);
+    font-family: Magic;
+}
+
+html {
+    background-color: black;
+    color: white;
+    font-family: Enchant;
+    cursor: url('images/cursor.png'), auto;
+}
+
+.test:active {
+    cursor: url('images/cursor_down.png'), auto;
+}
+#portrait {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height: 220px;
+}
+#portrait2 {
+    position: absolute;
+    right: 20px;
+    top: 200px;
+    height: 220px;
+}
+
+#HP {
+    position: absolute;
+    left: 250px;
+    top: -25px;
+    font-size: 35pt;
+    color: red;
+    font-family: Magic;
+}
+
+#STA {
+    position: absolute;
+    left: 250px;
+    top: 23px;
+    font-size: 35pt;
+    color: green;
+    font-family: Magic;
+}
+
+#MP {
+    position: absolute;
+    left: 250px;
+    top: 71px;
+    font-size: 35pt;
+    color: #0f94bf;
+    font-family: Magic;
+
+}
+
+#VIT {
+    position: absolute;
+    left: 29px;
+    top: 194px;
+    font-size: 40pt;
+}
+
+#STR {
+    position: absolute;
+    left: 29px;
+    top: 247px;
+    font-size: 40pt;
+}
+
+#AGI {
+    position: absolute;
+    left: 29px;
+    top: 300px;
+    font-size: 40pt;
+}
+
+#INT {
+    position: absolute;
+    left: 29px;
+    top: 353px;
+    font-size: 40pt;
+}
+
+#DMG {
+    position: absolute;
+    left: 29px;
+    top: 469px;
+    font-size: 40pt;
+}
+
+#EVA {
+    position: absolute;
+    left: 29px;
+    top: 522px;
+    font-size: 40pt;
+}
+
+#DEX {
+    position: absolute;
+    left: 29px;
+    top: 575px;
+    font-size: 40pt;
+}
+
+#DEF {
+    position: absolute;
+    left: 29px;
+    top: 628px;
+    font-size: 40pt;
+}
+
+.recht {
+    position: relative;
+    left: 20px;
+    top: 460px;
+    margin: 0px 12px 0px 0px;
+    color: white;
+    background-color: rgb(65, 6, 65);
+    cursor: url('images/cursor_hover.png'), auto;
+}
+
+#STP {
+    position: absolute;
+    left: 30px;
+    top: 465px;
+    font-size: 30px;
+    color: rgb(201, 201, 26);
+}
+
+#combat1 {
+    position: absolute;
+    left: 300px;
+    bottom: 50px;
+    width: 230px;
+    height: 100px;
+    font-size: 50pt;
+    font-family: Enchant;
+    background-color: brown;
+    color: lightgray;
+    cursor: url('images/cursor_hover.png'), auto;
+
+}
+
+#combat2 {
+    position: absolute;
+    left: 600px;
+    bottom: 50px;
+    width: 230px;
+    height: 100px;
+    font-size: 50pt;
+    font-family: Enchant;
+    background-color: brown;
+    color: lightgray;
+    cursor: url('images/cursor_hover.png'), auto;
+
+}
+
+#combat3 {
+    position: absolute;
+    left: 900px;
+    bottom: 50px;
+    width: 230px;
+    height: 100px;
+    font-size: 50pt;
+    font-family: Enchant;
+    background-color: brown;
+    color: lightgray;
+    cursor: url('images/cursor_hover.png'), auto;
+
+}
+#combat4 {
+    position: absolute;
+    left: 1200px;
+    bottom: 50px;
+    width: 230px;
+    height: 100px;
+    font-size: 50pt;
+    font-family: Enchant;
+    background-color: brown;
+    color: lightgray;
+    cursor: url('images/cursor_hover.png'), auto;
+
+}
+#combatP1 {
+    position: absolute;
+    left: 300px;
+    bottom: 200px;
+    width: 230px;
+    height: 100px;
+    font-size: 50pt;
+    font-family: Enchant;
+    background-color: brown;
+    color: lightgray;
+    cursor: url('images/cursor_hover.png'), auto;
+    display: none;
+
+}
+#combatP2 {
+    position: absolute;
+    left: 600px;
+    bottom: 200px;
+    width: 230px;
+    height: 100px;
+    font-size: 35pt;
+    font-family: Enchant;
+    background-color: brown;
+    color: lightgray;
+    cursor: url('images/cursor_hover.png'), auto;
+    display: none;
+
+}
+#combatS1 {
+    position: absolute;
+    left: 300px;
+    bottom: 200px;
+    width: 230px;
+    height: 100px;
+    font-size: 50pt;
+    font-family: Enchant;
+    background-color: brown;
+    color: lightgray;
+    cursor: url('images/cursor_hover.png'), auto;
+    display: none;
+
+}
+#combatS2 {
+    position: absolute;
+    left: 600px;
+    bottom: 200px;
+    width: 230px;
+    height: 100px;
+    font-size: 50pt;
+    font-family: Enchant;
+    background-color: brown;
+    color: lightgray;
+    cursor: url('images/cursor_hover.png'), auto;
+    display: none;
+
+}
+
+
+#eHP {
+    position: absolute;
+    right: 250px;
+    top: -25px;
+    font-size: 35pt;
+    color: red;
+    font-family: Magic;
+}
+
+#eSTA {
+    position: absolute;
+    right: 250px;
+    top: 23px;
+    font-size: 35pt;
+    color: green;
+    font-family: Magic;
+}
+
+#eMP {
+    position: absolute;
+    right: 250px;
+    top: 71px;
+    font-size: 35pt;
+    color: #0f94bf;
+    font-family: Magic;
+
+}
+
+#eDMG {
+    position: absolute;
+    right: 250px;
+    top: 169px;
+    font-size: 40pt;
+}
+
+#eEVA {
+    position: absolute;
+    right: 250px;
+    top: 222px;
+    font-size: 40pt;
+}
+
+#eDEX {
+    position: absolute;
+    right: 250px;
+    top: 275px;
+    font-size: 40pt;
+}
+
+#eDEF {
+    position: absolute;
+    right: 250px;
+    top: 328px;
+    font-size: 40pt;
+}
+
+#enemy {
+    position: absolute;
+    right: 550px;
+    top: -60px;
+    color: darkred;
+    font-size: 60pt;
+}
+#alert {
+    position: absolute;
+    left: 750px;
+    top: 10px;
+    color: rgb(114, 19, 19);
+    font-size: 50pt;
+}
+#level {
+    position: absolute;
+    left: 250px;
+    top: 110px;
+    font-size: 45pt;
+    color: rgb(185, 185, 64);
+    font-family: Magic;
+}
+#xp {
+    position: absolute;
+    left: 25px;
+    top: 700px;
+    font-size: 30pt;
+    color: orange;
+}
+#condition {
+    position: absolute;
+    left: 600px;
+    top: 100px;
+    font-size: 35pt;
+    color: gray;
+}
+#again {
+    position: absolute;
+    left: 20px;
+    top: 810px;
+    background-image: url("images/again.png");
+    width: 60px;
+    height: 60px;
+    cursor: url('images/cursor_hover.png'), auto;
+}
+#next {
+    position: absolute;
+    left: 100px;
+    top: 810px;
+    background-image: url("images/next.png");
+    width: 60px;
+    height: 60px;
+    cursor: url('images/cursor_hover.png'), auto;
+}
+
+
+#p1 {
+    position: absolute;
+    left: 600px;
+    top: 180px;
+    font-size: 25pt;
+    color: rgb(163, 120, 233);
+}
+#e1 {
+    position: absolute;
+    left: 600px;
+    top: 220px;
+    font-size: 25pt;
+    color: rgb(221, 126, 126);
+}
+#OOOOOOOOF {
+    position: absolute;
+    left: 712px;
+    top: 300px;
+    display: none;
+    font-size: 150pt;
+    color: darkred;
+}
+#whydead {
+    position: absolute;
+    left: 749px;
+    top: 609px;
+    font-size: 30pt;
+    color: rgb(48, 6, 6);
+}
+#stun {
+    position: absolute;
+    left: 600px;
+    top: 280px;
+    font-size: 25pt;
+    color: orange;
+}

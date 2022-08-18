@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Wanderer's Wizardry v0.1</title>
+    <link rel="stylesheet" type="text/css" href="Styles/Main.css">
+    <link rel="stylesheet" type="text/css" href="Styles/Fight.css">
+</head>
+<body>
+    <div id = "mainmenu">
+        <div id = "Title">
+            <p id = "title1">The Wanderer's</p>
+            <div id = "titlebg">
+                <p id = "title2">Wizardry</p>
+            </div>
+        </div>
+        <div id = "Buttons">
+            <button onclick="TutorialStart()">Start</button>
+            <button>Load</button>
+        </div>
+    </div>
+    <div id = "Prog" >
+        <p>You are a magician on a journey to become the world's greatest. You're fully ready for anything, you've got your diploma from the Wizard's University after all!<br>
+            Though graduating with top grades isn't the same as being a capable wizard. You'll still need some real world experience if you are ever to seriosly accomplish
+            your goal.<br> And so you registered in the Adventurer's Guild and took on your first quest! You are to slay 3 rats within the outskirts of town.<br> Rats will harass
+            livestock and poison food if left unchecked - a real nuisance to life!<br> It is now up to you to free the farmers of these pests. It doesn't take long until you 
+            come across exactly what you're looking for.<br> Three rats are planning their next offensive, but unfortunately for them, you've got different ideas!
+        </p>
+        <button onclick="TutorialStart2()">Fight!</button>
+    </div>
+    <div id = "CombatScreen" hidden>
+        <div id = "TutorialScreen"></div>
+        <div id = "PlayerStatus">
+            <p id = "Name">Wanderer</p>
+            <p id = "Health">HP : 75/75</p>
+            <p id = "Armor">ARM : 8/8</p>
+        </div>
+        <div id = "ActionStatus">
+
+        </div>
+        <p id = "PlayerActions"></p>
+        <div id = "Spells">
+            <button id="spell0" tool-tip="Cast a simple fire spell that deals 15 damage.">Burn</button>
+            <button id="spell1" tool-tip="Cast a simple water spell that deals 10 damage.">Splash</button>
+            <button id="spell2" tool-tip="Cast a simple lightning spell that deals 18 damage.">Shock</button>
+            <button id="spell3" tool-tip="Cast a simple wind spell that deals 8 damage.">Breeze</button>
+        </div>
+        <div id = "cbuttons">
+            <button onclick="Clear()">Clear</button>
+            <button onclick="endTurn()">End Turn</button>
+        </div>
+        <div id = "EnemyAction"></div>
+        <div id = "EnemyStatus"></div>
+        <div id = "CombatLog"></div>
+        <div id = BattleEnd hidden>
+        </div>
+    </div>
+    <div id = "MainHub" hidden>
+        <div id = "GeneralStatus">
+            <p id = "hp1">hp</p>
+            <p id = "arm1">armour</p>
+            <p id = "lvl1">level</p>
+            <p id = "exp1">exp</p>
+            <p id = "gol1">gold</p>
+            <p id = "skl1">skil</p>
+        </div>
+        <div id = "Locations">
+            <button onclick="Locations(1)">Guild</button>
+            <button onclick="Locations(2)">Inn</button>
+            <button onclick="Locations(3)">Smith</button>
+            <button onclick="Locations(4)">Sewers</button>
+            <button onclick="Locations(5)">Slums</button>
+            <button onclick="Locations(6)">Woods</button>
+            <button onclick="Locations(7)">Lake</button>
+        </div>
+        <div id = "Location">
+            <p id = "LocationName"></p>
+            <div id = "divide"></div>
+            <p id = "LocationText"></p>
+            <div id = "LocationActions"></div>
+        </div>
+        <div id = "FindEnemies" hidden></div>
+        <div id = "SpellUp">
+            <button onclick="SkillUp(1)" tool-tip="+2 DMG, +1 BURN DMG, -1 SKILL POINTS">BURN</button>
+            <button onclick="SkillUp(2)" tool-tip="+2 DMG, -1 SKILL POINTS">SPLASH</button>
+            <button onclick="SkillUp(3)" tool-tip="+2 DMG, -1 SKILL POINTS">SHOCK</button>
+            <button onclick="SkillUp(4)" tool-tip="+2 DMG, -1 SKILL POINTS">BREEZE</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="Scripts/Moves.js"></script>
+<script src="Scripts/Enemies.js"></script>
+<script src="Scripts/Values.js"></script>
+<script src="Scripts/Hub.js"></script>
+<script src="Scripts/Tutorial.js"></script>
+<script src="Scripts/GenerateBattle.js"></script>
+<script src="Scripts/DeepCopy.js"></script>
+<script src="Scripts/Quests.js"></script>
+<script src="Scripts/Locations.js"></script>
+<script src="Scripts/Combat.js"></script>

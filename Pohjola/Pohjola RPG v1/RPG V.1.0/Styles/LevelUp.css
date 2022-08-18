@@ -1,0 +1,514 @@
+#LevelUpScreen {
+    width: 65%;
+    height: 90%;
+    background-color: rgb(26, 25, 25);
+    border-radius: 30px;
+    position: absolute;
+    left: 18%;
+    top: 5%;
+    margin: auto;
+}
+
+#topbar {
+    display: flex;
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    border-radius: 15px 15px 0px 0px;
+    text-align: center;
+    color: white;
+    font-size: 18pt;
+}
+
+#Stats {
+    transition: 0.2s;
+    height: 90%;
+    width: 80px;
+    border-radius: 15px 0px 0px 0px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    border-style: solid;
+}
+
+#SkillsMen {
+    transition: 0.2s;
+    height: 90%;
+    width: 80px;
+    border-radius: 0px 0px 0px 0px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    border-style: solid;
+}
+
+#Perks {
+    transition: 0.2s;
+    height: 90%;
+    width: 80px;
+    border-radius: 0px 0px 0px 0px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    border-style: solid;
+}
+
+#CharStat {
+    transition: 0.2s;
+    height: 90%;
+    width: 110px;
+    border-radius: 0px 0px 0px 0px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    border-style: solid;
+}
+
+#Merchant {
+    transition: 0.2s;
+    height: 90%;
+    width: 90px;
+    border-radius: 0px 0px 0px 0px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    border-style: solid;
+}
+
+#Locations {
+    transition: 0.2s;
+    height: 90%;
+    width: 110px;
+    border-radius: 0px 15px 0px 0px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    border-style: solid;
+}
+
+#StatTexts1 {
+    transition: 0.2s;
+    display: flex;
+    width: 75%;
+    height: 10%;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    margin-left: -25%;
+}
+
+#StatTexts1 p {
+    transition: 0.2s;
+    color: white;
+    position: relative;
+    margin: 35px;
+    font-size: 24pt;
+}
+
+#StatTexts2 {
+    display: flex;
+    width: 75%;
+    height: 10%;
+    position: absolute;
+    left: 50%;
+    top: 18%;
+    margin-left: -25%;
+}
+
+#StatTexts2 p {
+    color: white;
+    position: relative;
+    margin: 35px;
+    font-size: 24pt;
+}
+
+#SFam {
+    font-size: 27pt;
+    color: rgb(98, 153, 185);
+    position: absolute;
+    left: 15px;
+    top: 50px;
+}
+
+#Gam {
+    font-size: 27pt;
+    color: rgb(158, 139, 32);
+    position: absolute;
+    left: 15px;
+    top: 130px;
+}
+
+#StatDesc {
+    position: absolute;
+    left: 25px;
+    bottom: 15px;
+    font-size: 14pt;
+    color: gray;
+}
+
+#StatUp {
+    border-style: solid;
+    height: 200px;
+    width: 553px;
+    color: gold;
+    position: absolute;
+    left: 350px;
+    bottom: 390px;
+    border-radius: 4px;
+}
+
+#StatUp button {
+    transition: 0.2s;
+    width: 100px;
+    height: 70px;
+    border-radius: 8px;
+    position: relative;
+    left: 10px;
+    top: 0px;
+    font-size: 24pt;
+    margin: 15px;
+    background-color: crimson;
+    color: silver;
+    border-style: none;
+    box-shadow: inset 0 0 20px 1px black;
+}
+
+#StatUp button:hover {
+    background-color: rgb(146, 15, 41);
+    box-shadow: inset 0 0 20px 6px black;
+}
+
+#Levels {
+    width: 200px;
+    height: 70px;
+    position: absolute;
+    top: 200px;
+    left: 15px;
+    font-size: 27pt;
+    color: rgb(98, 153, 185);
+}
+
+#WPerks button {
+    transition: 0.2s;
+    width: 100px;
+    height: 70px;
+    border-radius: 8px;
+    font-size: 24pt;
+    color: silver;
+    border-style: none;
+    box-shadow: inset 0 0 20px 1px black;
+}
+
+#WPerks button:hover {
+    box-shadow: inset 0 0 20px 6px black;
+}
+
+#war1 {
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    margin-left: -50px;
+}
+
+#war2 {
+    position: absolute;
+    left: 50px;
+    top: 210px;
+}
+
+#war3 {
+    position: absolute;
+    left: 50%;
+    top: 210px;
+    margin-left: -50px;
+}
+
+#war4 {
+    position: absolute;
+    right: 50px;
+    top: 210px;
+}
+
+#war5 {
+    position: absolute;
+    left: 50px;
+    top: 340px;
+}
+
+#war6 {
+    position: absolute;
+    left: 50%;
+    top: 340px;
+    margin-left: -50px;
+}
+
+#war7 {
+    position: absolute;
+    right: 50px;
+    top: 340px;
+}
+
+#dec1 {
+    width: 5px;
+    height: 217px;
+    background-color: rgb(46, 44, 44);
+    position: absolute;
+    left: 50%;
+    top: 140px;
+    margin-left: -2.5px;
+    border-radius: 8px;
+}
+
+#dec2 {
+    width: 85%;
+    height: 5px;
+    background-color: rgb(46, 44, 44);
+    position: absolute;
+    left: 8%;
+    top: 187px;
+    border-radius: 8px;
+}
+
+#dec3 {
+    width: 5px;
+    height: 168px;
+    background-color: rgb(46, 44, 44);
+    position: absolute;
+    left: 100px;
+    top: 187px;
+    border-radius: 8px;
+}
+
+#dec4 {
+    width: 5px;
+    height: 168px;
+    background-color: rgb(46, 44, 44);
+    position: absolute;
+    right: 89px;
+    top: 187px;
+    border-radius: 8px;
+}
+
+#PerkDesc {
+    position: absolute;
+    left: 25px;
+    bottom: 15px;
+    font-size: 14pt;
+    color: gray;
+}
+
+#Forest1 {
+    outline: none;
+    transition: 0.2s;
+    border-style: none;
+    background-color: rgb(17, 172, 17);
+    width: 150px;
+    height: 75px;
+    border-radius: 12px 12px 0px 0px;
+    box-shadow: inset 0 0 14px 3px #0f2b17;
+    position: absolute;
+    left: 160px;
+    top: 140px;
+    color: silver;
+    font-size: 25pt;
+}
+
+#Forest1:hover {
+    background-color: rgb(13, 126, 13);
+    box-shadow: inset 0 0 16px 8px #0f2b17;
+}
+
+button {
+    outline: none;
+}
+
+#LocationButtons {
+    width: 90%;
+}
+
+#LocationButtons button {
+    outline: none;
+    transition: 0.2s;
+    border-style: none;
+    background-color: rgb(160, 59, 28);
+    width: 150px;
+    height: 75px;
+    border-radius: 12px 12px 0px 0px;
+    box-shadow: inset 0 0 14px 3px #50260a;
+    position: relative;
+    left: 160px;
+    top: 140px;
+    margin: 20px;
+    color: silver;
+    font-size: 25pt;
+}
+
+#LocationButtons button:hover {
+    background-color: rgb(116, 43, 21);
+    box-shadow: inset 0 0 16px 8px #3b1c08;
+}
+
+#CharTexts p {
+    color: silver;
+    font-size: 22pt;
+    position: relative;
+    left: 50%;
+    top: 25%;
+    margin-left: -110px;
+    margin-top: 50px;
+}
+
+/* STORE GRAPHICS */
+
+#wep1 {
+    transition: 0.2s;
+    width: 110px;
+    height: 180px;
+    background-color: rgb(88, 40, 21);
+    border-radius: 12px;
+    position: absolute;
+    left: 15%;
+    top: 20%;
+}
+
+#wep2 {
+    transition: 0.2s;
+    width: 110px;
+    height: 180px;
+    background-color: rgb(139, 138, 138);
+    border-radius: 12px;
+    position: absolute;
+    left: 25%;
+    top: 20%;
+}
+
+#wep3 {
+    transition: 0.2s;
+    width: 110px;
+    height: 180px;
+    background-color: rgb(148, 128, 16);
+    border-radius: 12px;
+    position: absolute;
+    left: 35%;
+    top: 20%;
+}
+
+#wep4 {
+    transition: 0.2s;
+    width: 110px;
+    height: 180px;
+    background-color: rgb(67, 10, 78);
+    border-radius: 12px;
+    position: absolute;
+    left: 45%;
+    top: 20%;
+}
+
+#arm1 {
+    transition: 0.2s;
+    width: 110px;
+    height: 180px;
+    background-color: rgb(88, 40, 21);
+    border-radius: 12px;
+    position: absolute;
+    left: 15%;
+    top: 45%;
+}
+
+#arm2 {
+    transition: 0.2s;
+    width: 110px;
+    height: 180px;
+    background-color: rgb(139, 138, 138);
+    border-radius: 12px;
+    position: absolute;
+    left: 25%;
+    top: 45%;
+}
+
+#arm3 {
+    transition: 0.2s;
+    width: 110px;
+    height: 180px;
+    background-color: rgb(148, 128, 16);
+    border-radius: 12px;
+    position: absolute;
+    left: 35%;
+    top: 45%;
+}
+
+#arm4 {
+    transition: 0.2s;
+    width: 110px;
+    height: 180px;
+    background-color: rgb(67, 10, 78);
+    border-radius: 12px;
+    position: absolute;
+    left: 45%;
+    top: 45%;
+}
+
+.weppic {
+    background-image: url("../Images/StoreWep.png");
+    width: 90px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: -2%;
+    margin-left: -45px;
+}
+
+.armpic {
+    background-image: url("../Images/StoreHel.png");
+    width: 90px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    margin-left: -45px;
+}
+
+#wep1:hover {
+    background-color: rgb(66, 31, 17);
+}
+
+#wep2:hover {
+    background-color: rgb(100, 99, 99);
+}
+
+#wep3:hover {
+    background-color: rgb(105, 91, 11);
+}
+
+#wep4:hover {
+    background-color: rgb(39, 6, 46);
+}
+
+#arm1:hover {
+    background-color: rgb(66, 31, 17);
+}
+
+#arm2:hover {
+    background-color: rgb(100, 99, 99);
+}
+
+#arm3:hover {
+    background-color: rgb(105, 91, 11);
+}
+
+#arm4:hover {
+    background-color: rgb(39, 6, 46);
+}
+
+.SelectedStore {
+    border-color: gold;
+    border-style: solid;
+}
+
+#StoreDesc {
+    position: absolute;
+    left: 25px;
+    bottom: 15px;
+    font-size: 14pt;
+    color: gray;
+}
